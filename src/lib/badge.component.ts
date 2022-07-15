@@ -1,6 +1,6 @@
 import { Component, HostBinding, Input } from '@angular/core';
 
-import { view, TcView, size, TcSize } from '@ngx-tc/base';
+import { view, TcView, TcSize } from '@ngx-tc/base';
 import { badgeArrow, badgeSize } from './badge';
 
 @Component({
@@ -28,6 +28,6 @@ export class BadgeComponent implements TcView, TcSize {
   @HostBinding('class.arrow-left') get arrowLeft() { return this.arrow === badgeArrow.left};
 
   @Input('view') tcView: string | view = view.primary;
-  @Input('size') tcSize: string | size = badgeSize.default;
-  @Input() arrow: badgeArrow;
+  @Input('size') tcSize: string | badgeSize = badgeSize.default;
+  @Input() arrow: string | badgeArrow;
 }

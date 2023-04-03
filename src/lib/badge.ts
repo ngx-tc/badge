@@ -1,8 +1,8 @@
 export enum badgeArrow {
   top = 'top',
-  right = 'right',
+  end = 'end',
   bottom = 'bottom',
-  left = 'left'
+  start = 'start'
 }
 
 export enum badgeSize {
@@ -11,3 +11,7 @@ export enum badgeSize {
   default = 'default',
   lg = 'lg'
 }
+
+export type BadgeSize = 'xs' | 'sm' | 'default' | 'lg';
+
+export type BadgeArrow = 'top' | 'end' | 'bottom' | 'start';

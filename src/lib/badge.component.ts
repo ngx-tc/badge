@@ -1,14 +1,14 @@
 import { Component, HostBinding, Input } from '@angular/core';
 
-import { view, TcView, TcSize } from '@ngx-tc/base';
-import { badgeArrow, badgeSize } from './badge';
+import { view, TcView, View } from '@ngx-tc/base';
+import { BadgeArrow, badgeArrow, BadgeSize, badgeSize } from './badge';
 
 @Component({
   selector: 'tc-badge',
   templateUrl: './badge.component.html',
   styleUrls: ['./badge.component.scss']
 })
-export class BadgeComponent implements TcView, TcSize {
+export class BadgeComponent implements TcView {
   @HostBinding('class') get class() {
     return 'tc-badge';
   };
@@ -23,11 +23,11 @@ export class BadgeComponent implements TcView, TcSize {
   @HostBinding('class.badge-error') get typeError() { return this.tcView === view.error};
   @HostBinding('class.badge-outline') @Input() outline: boolean;
   @HostBinding('class.arrow-top') get arrowTop() { return this.arrow === badgeArrow.top};
-  @HostBinding('class.arrow-right') get arrowRight() { return this.arrow === badgeArrow.right};
+  @HostBinding('class.arrow-end') get arrowRight() { return this.arrow === badgeArrow.end};
   @HostBinding('class.arrow-bottom') get arrowBottom() { return this.arrow === badgeArrow.bottom};
-  @HostBinding('class.arrow-left') get arrowLeft() { return this.arrow === badgeArrow.left};
+  @HostBinding('class.arrow-start') get arrowLeft() { return this.arrow === badgeArrow.start};
 
-  @Input('view') tcView: string | view = view.primary;
-  @Input('size') tcSize: string | badgeSize = badgeSize.default;
-  @Input() arrow: string | badgeArrow;
+  @Input('view') tcView: View = view.primary;
+  @Input('size') tcSize: BadgeSize = badgeSize.default;
+  @Input() arrow: BadgeArrow;
 }

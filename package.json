@@ -1,18 +1,19 @@
 {
   "name": "@ngx-tc/badge",
-  "version": "0.0.8",
+  "version": "1.0.0",
   "author": "type0code",
   "license": "MIT",
-  "description": "Angular UI components library",
+  "description": "Angular library provides badges as a UI component to display visual indicators such as labels, counters, or statuses.",
   "keywords": ["angular", "angular UI", "angular components", "ng", "ngx", "angular form", "angular control", "angular badge"],
   "repository": "https://github.com/ngx-tc/badge",
+  "homepage": "http://tc-library.type-code.pro/#/components/badges",
   "config": {
     "access": "public"
   },
   "peerDependencies": {
     "@angular/common": "^15.1.5",
     "@angular/core": "^15.1.5",
-    "@ngx-tc/base": "^0.0.17"
+    "@ngx-tc/base": "^1.0.1"
   },
   "dependencies": {
     "tslib": "^2.5.0"

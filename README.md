@@ -1,24 +1,39 @@
-# Badge
+# About
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.5.
+@ngx-tc/badge is an Angular library that provides developers with a UI component to display badges in their applications. The library is designed to be easy to use and customizable, allowing developers to quickly and easily create badges that fit their specific needs.
 
-## Code scaffolding
+The library includes a number of pre-built badge templates, which can be easily customized to fit the specific requirements of your application. These templates include standard badge types such as labels, counters, and statuses.
 
-Run `ng generate component component-name --project badge` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project badge`.
-> Note: Don't forget to add `--project badge` or else it will be added to the default project in your `angular.json` file. 
+The library is built using Angular and is designed to be lightweight and easy to use, with minimal setup required to get started. Overall, @ngx-tc/badge is a powerful and flexible library that provides developers with the tools they need to create effective and customizable badges for their Angular applications.
 
-## Build
+## Usage
 
-Run `ng build badge` to build the project. The build artifacts will be stored in the `dist/` directory.
+Install `@ngx-tc/badge` in your project:
 
-## Publishing
+```
+npm install @ngx-tc/badge
+```
 
-After building your library with `ng build badge`, go to the dist folder `cd dist/badge` and run `npm publish`.
+Import `TcBadgeModule` e.g. in your `app.module.ts`:
+```typescript
+import { TcBadgeModule } from '@ngx-tc/badge';
 
-## Running unit tests
+@NgModule({
+  imports: [
+    ...
+      TcBadgeModule
+  ],
+})
+export class AppModule {}
+```
 
-Run `ng test badge` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Use the `tc-badge` component in you app:
+```html
+<tc-badge>
+  Badge
+</tc-badge>
+```
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Demo
+To view a working demo of the library in action, please follow the provided link. The demo will allow you to explore the various components and features included in this library and see how they can be used in your Angular applications.
+[http://tc-library.type-code.pro/#/components/badges](http://tc-library.type-code.pro/#/components/badges)

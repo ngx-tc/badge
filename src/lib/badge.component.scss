@@ -78,7 +78,7 @@ $_types: ('primary', 'accent', 'success', 'info', 'warning', 'error');
     left: 50%;
     margin-left: #{toRem(-6)};
   }
-  &.arrow-right .arrow {
+  &.arrow-end .arrow {
     border-left-color: inherit;
     left: 100%;
     margin-top: #{toRem(-6)};
@@ -90,7 +90,7 @@ $_types: ('primary', 'accent', 'success', 'info', 'warning', 'error');
     margin-left: #{toRem(-6)};
     top: 100%;
   }
-  &.arrow-left .arrow {
+  &.arrow-start .arrow {
     border-right-color: inherit;
     margin-top: #{toRem(-6)};
     right: 100%;

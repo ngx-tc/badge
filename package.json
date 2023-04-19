@@ -1,6 +1,6 @@
 {
   "name": "@ngx-tc/badge",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "type0code",
   "license": "MIT",
   "description": "Angular library provides badges as a UI component to display visual indicators such as labels, counters, or statuses.",

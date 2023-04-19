@@ -19,6 +19,7 @@ $_types: ('primary', 'accent', 'success', 'info', 'warning', 'error');
   --tc-badge-transition: var(--tc-base-animation);
   --tc-badge-bg: transparent;
   --tc-badge-color: var(--tc-color-primary);
+  --tc-badge-arrow-size: #{toRem(5)};
 
   align-items: center;
   background: var(--tc-badge-bg);
@@ -67,7 +68,7 @@ $_types: ('primary', 'accent', 'success', 'info', 'warning', 'error');
   }
 
   .arrow {
-    border: #{toRem(6)} solid transparent;
+    border: var(--tc-badge-arrow-size) solid transparent;
     height: 0;
     position: absolute;
     width: 0;
@@ -75,25 +76,23 @@ $_types: ('primary', 'accent', 'success', 'info', 'warning', 'error');
   &.arrow-top .arrow {
     border-bottom-color: inherit;
     bottom: 100%;
-    left: 50%;
-    margin-left: #{toRem(-6)};
+    inset-inline-start: calc(50% - var(--tc-badge-arrow-size));
   }
   &.arrow-end .arrow {
-    border-left-color: inherit;
-    left: 100%;
-    margin-top: #{toRem(-6)};
+    border-inline-start-color: inherit;
+    inset-inline-start: 100%;
+    margin-top: calc(var(--tc-badge-arrow-size) * -1);
     top: 50%;
   }
   &.arrow-bottom .arrow {
     border-top-color: inherit;
-    left: 50%;
-    margin-left: #{toRem(-6)};
+    inset-inline-start: calc(50% - var(--tc-badge-arrow-size));
     top: 100%;
   }
   &.arrow-start .arrow {
-    border-right-color: inherit;
-    margin-top: #{toRem(-6)};
-    right: 100%;
+    border-inline-end-color: inherit;
+    margin-top: calc(var(--tc-badge-arrow-size) * -1);
+    inset-inline-end: 100%;
     top: 50%;
   }
 }
